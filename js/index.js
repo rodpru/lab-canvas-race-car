@@ -18,19 +18,20 @@ car.src = '/images/car.png'
 
 function startGame() {
   ctx.drawImage(road, 0, 0, 500, 700);
-  ctx.drawImage(car, 120, 370, 40, 70);
+  ctx.drawImage(car, 250, 550, 60, 90);
 }
 };
+
  class car {
    constructor() {
      this.x = 120;
      this.y = 230;
    } 
    moveLeft() {
-     this.x -= 25;
+     this.y -= 25;
    }
    moveRight(){
-     this.x += 25;
+     this.y += 25;
    }
  }
 
