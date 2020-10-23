@@ -22,6 +22,7 @@ function startGame() {
   // ctx.drawImage(car, 120, 370, 40, 70);
 }
 };
+
  class car {
    constructor() {
      this.x = 220;
@@ -33,10 +34,10 @@ function startGame() {
      this.ctx = canvas.getContext('2d');
    } 
    moveLeft() {
-     this.x -= 25;
+     this.y -= 25;
    }
    moveRight(){
-     this.x += 25;
+     this.y += 25;
    }
    draw() {
      this.ctx.drawImage(this.image, this.x, this.y, 60, 90);
@@ -47,10 +48,10 @@ function startGame() {
  document.addEventListener('keydown', e => {
   switch(e.keyCode) {
       case 37:
-          player.moveLeft();
+        player.moveLeft();
       break;
       case 39:
-          player.moveRight();
+        player.moveRight();
       break;
   }
 });
